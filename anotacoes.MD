@@ -9,19 +9,19 @@ Para começarmos é necessário instalar o pacote:
 Para o uso do roteamento é necessário que todos os componentes que vão ser navegados estejam circundados pelo component <b>Switch</b> com o <b>Route</b>
 por exemplo:
 
-<b>
-    <Switch>
-        <Route>
-            <Home />
-        <Route/>
-    </Switch>
-</b>
+<code>
+    < Switch>
+        < Route>
+            < Home />
+        < Route/>
+    </ Switch>
+</code>
 
 Além disso para fazer a aplicação ir para aquele link é necessário que vc utilize o component <b>Link</b> dessa forma :
 
-<b>
-    <Link to="/" > Inicio </Link> 
-</b>
+<code>
+    < Link to="/" > Inicio </> 
+</code>
 
 Todos esses recursos estão disponíveis na react-router-dom.
 
@@ -42,3 +42,9 @@ import { useParams } from "react-router-dom";
     }
 
 </code>
+
+# Route Exact
+
+Caso você não passe o atributo exact no link dentro das rotas no switch, e seu componente "/" for o primeiro cara, vai ser comum
+todas as rotas exibirem esse componente, porque todas começam com o / também! Então é interessante que apenas na home, você diga "exact"
+para evitar esse problema.
