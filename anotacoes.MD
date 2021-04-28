@@ -9,19 +9,19 @@ Para começarmos é necessário instalar o pacote:
 Para o uso do roteamento é necessário que todos os componentes que vão ser navegados estejam circundados pelo component <b>Switch</b> com o <b>Route</b>
 por exemplo:
 
-<code>
+<b>
     <Switch>
         <Route>
             <Home />
         <Route/>
     </Switch>
-</code>
+</b>
 
 Além disso para fazer a aplicação ir para aquele link é necessário que vc utilize o component <b>Link</b> dessa forma :
 
-<code>
+<b>
     <Link to="/" > Inicio </Link> 
-</code>
+</b>
 
 Todos esses recursos estão disponíveis na react-router-dom.
 
