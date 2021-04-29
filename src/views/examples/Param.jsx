@@ -1,12 +1,14 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams } from "react-router";
+import PageTitle from "../../components/layout/PageTitle";
 
 const Param = (props) => {
   const { id } = useParams();
+  const text = `Exibindo parâmetros nas rotas: ${id}`;
+
   return (
     <div className="Param">
-      <h1>Passando parâmetros</h1>
-      <h2> Valor: {id} </h2>
+      <PageTitle title="Recebendo parâmetro da rota" subtitle={text} />
     </div>
   );
 };
