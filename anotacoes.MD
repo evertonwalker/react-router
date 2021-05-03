@@ -48,3 +48,12 @@ import { useParams } from "react-router-dom";
 Caso você não passe o atributo exact no link dentro das rotas no switch, e seu componente "/" for o primeiro cara, vai ser comum
 todas as rotas exibirem esse componente, porque todas começam com o / também! Então é interessante que apenas na home, você diga "exact"
 para evitar esse problema.
+
+# useState
+
+Hook usado sempre que você precisa atualizar o estado de um determinado dado.
+
+# useEffect
+
+Hook usado como efeito colateral, supondo que alguma variável tenha uma modificação e sempre que ela sofrer alguma mudança vc precisa ou pode fazer algo
+é interessante usar esse Hook, para ele ficar observando as mudanças e fazer sua lógica.
