@@ -17,9 +17,14 @@ function calcFactorial(n) {
 const UseEffect = (props) => {
   const [number, setNumber] = useState(1);
   const [fatorial, setFatorial] = useState(1);
+  const [paOuImpa, setPaOuImpa] = useState(true);
 
   useEffect(() => {
     setFatorial(calcFactorial(number));
+  }, [number]);
+
+  useEffect(() => {
+    setPaOuImpa(number % 2 === 0);
   }, [number]);
 
   return (
@@ -41,6 +46,10 @@ const UseEffect = (props) => {
           value={number}
           onChange={(e) => setNumber(e.target.value)}
         />
+      </div>
+      <SectionTitle title="Exercício #02" />
+      <div className="center">
+        <span className="text">Esse número é? {paOuImpa ? "Pá" : "Impá"} </span>
       </div>
     </div>
   );
