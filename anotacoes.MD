@@ -57,3 +57,8 @@ Hook usado sempre que você precisa atualizar o estado de um determinado dado.
 
 Hook usado como efeito colateral, supondo que alguma variável tenha uma modificação e sempre que ela sofrer alguma mudança vc precisa ou pode fazer algo
 é interessante usar esse Hook, para ele ficar observando as mudanças e fazer sua lógica.
+
+# useRef
+
+O hook useRef é semelhante o useState, ele também serve para atualizar o estado de um determinado dado, a diferença é que ele não atualiza o seu componente
+e apenas o estado da memória, então pra ter acesso ao valor atual da variável que está vinculada ao useRef, é necessário acessar o .current dela.
