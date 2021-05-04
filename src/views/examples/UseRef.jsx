@@ -9,7 +9,7 @@ function merge(valueOneInput, valueTwoInput) {
     })
     .join("");
 }
-
+// eslint-disable-next-line
 function mergeWithoutRepeatCharacters(valueOneInput, valueTwoInput) {
   const valueSetOne = new Set(Array.from(valueOneInput));
   const valueSetTwo = new Set(Array.from(valueTwoInput));
