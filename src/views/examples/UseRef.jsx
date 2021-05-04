@@ -3,6 +3,14 @@ import PageTitle from "../../components/layout/PageTitle";
 import SectionTitle from "../../components/layout/SectionTitle";
 
 function merge(valueOneInput, valueTwoInput) {
+  return [...valueOneInput]
+    .map((elemento, i) => {
+      return `${elemento}${valueTwoInput[i] || ""}`;
+    })
+    .join("");
+}
+
+function mergeWithoutRepeatCharacters(valueOneInput, valueTwoInput) {
   const valueSetOne = new Set(Array.from(valueOneInput));
   const valueSetTwo = new Set(Array.from(valueTwoInput));
 
@@ -46,6 +54,7 @@ const UseRef = (props) => {
   useEffect(() => {
     count.current++;
     myInput1.current.focus();
+    // setMerge(mergeWithoutRepeatCharacters(myInput1.current.value, myInput2.current.value));
     setMerge(merge(myInput1.current.value, myInput2.current.value));
   }, [value2]);
 
