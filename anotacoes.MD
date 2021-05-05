@@ -62,3 +62,13 @@ Hook usado como efeito colateral, supondo que alguma variável tenha uma modific
 
 O hook useRef é semelhante o useState, ele também serve para atualizar o estado de um determinado dado, a diferença é que ele não atualiza o seu componente
 e apenas o estado da memória, então pra ter acesso ao valor atual da variável que está vinculada ao useRef, é necessário acessar o .current dela.
+
+# useMemo
+
+Hook utilizado para trazer um valor cacheado.
+
+# useCallback
+
+Este hook é utilizado para cachear o valor de uma função, ele é perfeito quando vc precisa ter um componente cacheado, ou seja que o seu estado não precisa
+ser renderizado a cada ação que ele irá executar, é preciso utilizar com o React.memo(component) na criação do componente, para conseguir obter todo o
+fluxo do hook.

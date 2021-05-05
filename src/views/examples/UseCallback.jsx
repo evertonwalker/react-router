@@ -1,15 +1,29 @@
-import React from 'react'
-import PageTitle from '../../components/layout/PageTitle'
+import React, { useCallback, useState } from "react";
+import PageTitle from "../../components/layout/PageTitle";
+import UseCallBackButtons from "./UseCallBackButtons";
 
 const UseCallback = (props) => {
-    return (
-        <div className="UseCallback">
-            <PageTitle
-                title="Hook UseCallback"
-                subtitle="Retorna uma função memoizada!"
-            />
-        </div>
-    )
-}
+  const [count, setCount] = useState(0);
 
-export default UseCallback
+  const inc = useCallback(
+    (delta) => {
+      setCount((curr) => curr + delta);
+    },
+    [setCount]
+  );
+
+  return (
+    <div className="UseCallback">
+      <PageTitle
+        title="Hook UseCallback"
+        subtitle="Retorna uma função memoizada!"
+      />
+      <div className="center">
+        <span className="text">{count}</span>
+        <UseCallBackButtons inc={inc}></UseCallBackButtons>
+      </div>
+    </div>
+  );
+};
+
+export default UseCallback;
