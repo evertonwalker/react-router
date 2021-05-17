@@ -7,10 +7,10 @@ import Content from "../components/layout/Content";
 import DataContext, { data } from "../data/DataContext";
 
 const App = (props) => {
-  const [state, setState] = useState(data);
+  const [context, setStateContext] = useState(data);
 
   return (
-    <DataContext.Provider value={{ state, setState }}>
+    <DataContext.Provider value={{ context, setStateContext }}>
       <div className="App">
         <Router>
           <Menu />

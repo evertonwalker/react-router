@@ -3,12 +3,12 @@ import PageTitle from "../../components/layout/PageTitle";
 import DataContext from "../../data/DataContext";
 
 const UseContext = (props) => {
-  const { state, setState } = useContext(DataContext);
+  const { context, setStateContext } = useContext(DataContext);
 
   function setNumber(value) {
-    setState({
-      ...state,
-      number: state.number + value,
+    setStateContext({
+      ...context,
+      number: context.number + value,
     });
   }
 
@@ -19,8 +19,8 @@ const UseContext = (props) => {
         subtitle="Aceita um objeto de contexto e retorna o valor atual do contexto!"
       />
       <div className="center">
-        <span className="text">{state.text}</span>
-        <span className="text">{state.number}</span>
+        <span className="text">{context.text}</span>
+        <span className="text">{context.number}</span>
       </div>
 
       <div className="center">
