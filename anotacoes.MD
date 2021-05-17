@@ -76,6 +76,6 @@ fluxo do hook.
 # Context API
 
 Context API é um tipo de recurso bastante utilizado pelo react, para compartilhar um estado por toda aplicação, entre diversos componente que não se ligam diretamente/indiretamente
-Você precisa criar um objeto nesse tipo de contexto, circundar os componentes que poderam ouvir seja no app ou no index da aplicação com um DataContext.provider E
-depois no componente chamar o dado para ser exibido ou executar sua lógica.
+Você precisa criar um objeto nesse tipo de contexto, circundar os componentes que poderam ouvir seja no app ou no index da aplicação com um DataContext.provider e compartilhando os valores
+pelo atributo value do DataContext.Provider, eles que serão recebidos por todos os componentes que capturarem esse contexto. Depois no componente chamar o dado para ser exibido ou executar sua lógica.
 É uma boa alternativa para quando tempos um estado que deve ser compartilhado e não queremos algum recurso extermo como o Redux por exemplo.
