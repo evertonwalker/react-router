@@ -16,11 +16,15 @@ const UseContext = (props) => {
     });
   }
 
-  useEffect(() => {
-    if (number > 1250) {
-      setText("Eita!");
-    }
-  }, [number]);
+  useEffect(
+    () => {
+      if (number > 1250) {
+        setText("Eita!");
+      }
+    },
+    // eslint-disable-next-line
+    [number]
+  );
 
   return (
     <div className="UseContext">
